@@ -54,8 +54,6 @@ let team = [
 
 const containerTeam = document.querySelector('.team-container');
 
-let team = "";
-
 for (let i = 0; i < team.length; i++) {
     let figureTeam = team[i];
     let imGMemb = figureTeam.imgTeam;
