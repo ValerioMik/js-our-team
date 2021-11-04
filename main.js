@@ -12,42 +12,71 @@ Ogni membro dovrà avere le informazioni necessarie per stampare la relativa car
 let team = [
 
     {
-        "imgTeam" : "img\wayne-barnett-founder-ceo.jpg",
-        "nomeTeam":"Wayne Barnett",
+        "imgTeam": "img\wayne-barnett-founder-ceo.jpg",
+        "nomeTeam": "Wayne Barnett",
         "ruoloTeam": "founder ceo"
     },
 
     {
-        "imgTeam" : "img\angela-caroll-chief-editor.jpg",
-        "nomeTeam":"Angela Carol",
+        "imgTeam": "img\angela-caroll-chief-editor.jpg",
+        "nomeTeam": "Angela Carol",
         "ruoloTeam": "chief editor"
     },
 
     {
-        "imgTeam" : "img\angela-lopez-social-media-manager.jpg",
-        "nomeTeam":"Angela Lopez",
+        "imgTeam": "img\angela-lopez-social-media-manager.jpg",
+        "nomeTeam": "Angela Lopez",
         "ruoloTeam": "media manager"
     },
 
     {
-        "imgTeam" : "img\barbara-ramos-graphic-designer.jpg",
-        "nomeTeam":"Barbara Ramos",
+        "imgTeam": "img\barbara-ramos-graphic-designer.jpg",
+        "nomeTeam": "Barbara Ramos",
         "ruoloTeam": "graphic designer"
     },
 
     {
-        "imgTeam" : "img\scott-estrada-developer.jpg",
-        "nomeTeam":"Scott Estrada",
+        "imgTeam": "img\scott-estrada-developer.jpg",
+        "nomeTeam": "Scott Estrada",
         "ruoloTeam": "developer "
     },
 
-   
+
 
     {
-        "imgTeam" : "img\angela-caroll-chief-editor.jpg",
-        "nomeTeam":"Angela Carol",
+        "imgTeam": "img\angela-caroll-chief-editor.jpg",
+        "nomeTeam": "Angela Carol",
         "ruoloTeam": "chief editor"
     },
 
-    
-]
+
+];
+
+const containerTeam = document.querySelector('.team-container');
+
+let team = "";
+
+for (let i = 0; i < team.length; i++) {
+    let figureTeam = team[i];
+    let imGMemb = figureTeam.imgTeam;
+    let nomeMemb = figureTeam.nomeTeam;
+    let ruoloMemb = figureTeam.ruoloTeam;
+    containerTeam.innerHTML +=`
+        <div class="team-card">   
+            <div class="card-image">
+                    <img
+                    src="${imGMemb}"
+                    alt="${nomeMemb}"
+                    />
+            </div>
+             <div class="card-text">
+                    <h3>${nomeMemb}</h3>
+                    <p>${ruoloMemb}</p>
+            </div>
+
+        </div>      
+             ` ;
+}
+
+
+
